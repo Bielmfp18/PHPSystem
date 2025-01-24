@@ -27,4 +27,13 @@ $resultado = $num1 * $num2; //multiplicação
 $resultado = $num1 / $num2; //divisão
 $resultado = $num1 % $num2; //resto
 $resultado = $num1 ** $num2; //potenciação
+
+echo 1+1.5, '<br>';
+var_dump(1+1.5); //float
+echo '<br>';
+echo 5/2, '<br>';
+echo intdiv(5,2), '<br>'; //parte inteiro
+echo round(5/2), '<br>'; //arredondar
+echo 5%2, '<br>'; //mod
+echo 5**2, '<br>'; //exp
 ?>
