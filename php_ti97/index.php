@@ -42,7 +42,7 @@ echo 5**2, '<br>'; //exp
 echo 2+2*3, '<br>'; //8
 echo (2+2)*3, '<br>';//12
 echo 2+2*3**2,'<br>'; //20
-echo ((2+2)*3)**2; 
+echo ((2+2)*3)**2, '<br>','<br>'; 
 
 ?>
 
@@ -62,7 +62,7 @@ $cores = ["Vermelho", "Azul", "Amarelo"];
 
 echo $frutas [1]."<br>";
 
-echo $cores [1]."<br>";
+echo $cores [1]."<br>"."<br>";
 ?>
 
 <?php 
@@ -76,13 +76,13 @@ echo("O preço é = ". number_format($valor,2,",","."))."<br>";
 echo "<br>";
 $valor = 1200.50;
 
-echo("O preço é = R$ ". number_format($valor, 2,",","."));
+echo("O preço é = R$ ". number_format($valor, 2,",","."))."<br>"."<br>";
 
 ?>
 
 <?php
 //Atribuição
- 
+
 $valor = 10;
 echo("Valor = ".$valor."<br>");
 $valor += 1;
@@ -95,4 +95,42 @@ $valor /= 2;
 echo("Valor = ".$valor."<br>");
 $valor %= 2;
 echo("Valor =".$valor."<br>");
+
+//If 
+$a=10;
+$b=9;
+if($a > $b){
+echo "A é maior que B"."<br>";
+} 
+
+//If-Else
+$c=10;
+$d=11;
+if($c > $d){
+echo "C é maior que D";
+} else {
+    echo "C não é maior que D "."<br>";
+}
+
+//Else-If
+if ($a > $b) {
+    echo "a é maior que b";
+} elseif ($a == $b){
+echo "A é igual a B";
+}
+
+//And
+
+$a=1;
+$b=1;
+if(($a==1) && ($b==1))
+{
+    echo("Ambos igual a 1");
+}
+else
+{
+    echo("A ou B diferente de 1");
+}
 ?>
+
+
