@@ -62,5 +62,20 @@ $cores = ["Vermelho", "Azul", "Amarelo"];
 
 echo $frutas [1]."<br>";
 
-echo $cores [1];
+echo $cores [1]."<br>";
+?>
+
+<?php 
+
+//Formatar
+
+$valor = 200.50;
+//O Nº 2 dentro do number_format serve para indicar o número de casas decimais que aprecerão na tela do usuário e o ponto (.) serve para adiconar o ponto de milhar ao número, exemplo: "1.000".
+echo("O preço é = ". number_format($valor,2,",","."))."<br>";
+
+echo "<br>";
+$valor = 1200.50;
+
+echo("O preço é = R$ ". number_format($valor, 2,",","."));
+
 ?>
