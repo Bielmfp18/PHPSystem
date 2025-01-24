@@ -79,3 +79,20 @@ $valor = 1200.50;
 echo("O preço é = R$ ". number_format($valor, 2,",","."));
 
 ?>
+
+<?php
+//Atribuição
+ 
+$valor = 10;
+echo("Valor = ".$valor."<br>");
+$valor += 1;
+echo("Valor = ".$valor."<br>");
+$valor -= 2;
+echo("valor = ".$valor."<br>");
+$valor *= 2;
+echo("Valor = ".$valor."<br>");
+$valor /= 2;
+echo("Valor = ".$valor."<br>");
+$valor %= 2;
+echo("Valor =".$valor."<br>");
+?>
