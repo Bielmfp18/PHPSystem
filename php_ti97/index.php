@@ -1,11 +1,11 @@
-<? 
+<?
 $inteiro = 100;
-$decimal = (double) $inteiro;
+$decimal = (float) $inteiro;
 var_dump($inteiro);
 var_dump($decimal);
 ?>
 
-<?php 
+<?php
 $num1 = 10;
 $num2 = 5;
 
@@ -28,21 +28,21 @@ $resultado = $num1 / $num2; //divisão
 $resultado = $num1 % $num2; //resto
 $resultado = $num1 ** $num2; //potenciação
 
-echo 1+1.5, '<br>';
-var_dump(1+1.5); //float
+echo 1 + 1.5, '<br>';
+var_dump(1 + 1.5); //float
 echo '<br>';
-echo 5/2, '<br>';
-echo intdiv(5,2), '<br>'; //parte inteiro
-echo round(5/2), '<br>'; //arredondar
-echo 5%2, '<br>'; //mod
-echo 5**2, '<br>'; //exp
- 
+echo 5 / 2, '<br>';
+echo intdiv(5, 2), '<br>'; //parte inteiro
+echo round(5 / 2), '<br>'; //arredondar
+echo 5 % 2, '<br>'; //mod
+echo 5 ** 2, '<br>'; //exp
+
 //Precedência = () > ** > / % * > + -
 
-echo 2+2*3, '<br>'; //8
-echo (2+2)*3, '<br>';//12
-echo 2+2*3**2,'<br>'; //20
-echo ((2+2)*3)**2, '<br>','<br>'; 
+echo 2 + 2 * 3, '<br>'; //8
+echo (2 + 2) * 3, '<br>'; //12
+echo 2 + 2 * 3 ** 2, '<br>'; //20
+echo ((2 + 2) * 3) ** 2, '<br>', '<br>';
 
 ?>
 
@@ -52,31 +52,31 @@ echo ((2+2)*3)**2, '<br>','<br>';
 //Constantes não alteram valores
 
 const nome = "Mariana";
- echo nome."<br>";
- define('valor', 10.00);
- echo valor."<br>";
+echo nome . "<br>";
+define('valor', 10.00);
+echo valor . "<br>";
 
 //Array
 $frutas = ["Maçã", "Banana", "Laranja"];
 $cores = ["Vermelho", "Azul", "Amarelo"];
 
-echo $frutas [1]."<br>";
+echo $frutas[1] . "<br>";
 
-echo $cores [1]."<br>"."<br>";
+echo $cores[1] . "<br>" . "<br>";
 ?>
 
-<?php 
+<?php
 
 //Formatar
 
 $valor = 200.50;
 //O Nº 2 dentro do number_format serve para indicar o número de casas decimais que aprecerão na tela do usuário e o ponto (.) serve para adiconar o ponto de milhar ao número, exemplo: "1.000".
-echo("O preço é = ". number_format($valor,2,",","."))."<br>";
+echo ("O preço é = " . number_format($valor, 2, ",", ".")) . "<br>";
 
 echo "<br>";
 $valor = 1200.50;
 
-echo("O preço é = R$ ". number_format($valor, 2,",","."))."<br>"."<br>";
+echo ("O preço é = R$ " . number_format($valor, 2, ",", ".")) . "<br>" . "<br>";
 
 ?>
 
@@ -84,53 +84,75 @@ echo("O preço é = R$ ". number_format($valor, 2,",","."))."<br>"."<br>";
 //Atribuição
 
 $valor = 10;
-echo("Valor = ".$valor."<br>");
+echo ("Valor = " . $valor . "<br>");
 $valor += 1;
-echo("Valor = ".$valor."<br>");
+echo ("Valor = " . $valor . "<br>");
 $valor -= 2;
-echo("valor = ".$valor."<br>");
+echo ("valor = " . $valor . "<br>");
 $valor *= 2;
-echo("Valor = ".$valor."<br>");
+echo ("Valor = " . $valor . "<br>");
 $valor /= 2;
-echo("Valor = ".$valor."<br>");
+echo ("Valor = " . $valor . "<br>");
 $valor %= 2;
-echo("Valor =".$valor."<br>");
+echo ("Valor =" . $valor . "<br>");
 
 //If 
-$a=10;
-$b=9;
-if($a > $b){
-echo "A é maior que B"."<br>";
-} 
+$a = 10;
+$b = 9;
+if ($a > $b) {
+    echo "A é maior que B" . "<br>";
+}
 
 //If-Else
-$c=10;
-$d=11;
-if($c > $d){
-echo "C é maior que D";
+$c = 10;
+$d = 11;
+if ($c > $d) {
+    echo "C é maior que D";
 } else {
-    echo "C não é maior que D "."<br>";
+    echo "C não é maior que D " . "<br>";
 }
 
 //Else-If
 if ($a > $b) {
-    echo "a é maior que b";
-} elseif ($a == $b){
-echo "A é igual a B";
+    echo "A é maior que B" . "<br>";
+} elseif ($a == $b) {
+    echo "A é igual a B";
 }
 
 //And
 
-$a=1;
-$b=1;
-if(($a==1) && ($b==1))
-{
-    echo("Ambos igual a 1");
+$a = 1;
+$b = 1;
+if (($a == 1) && ($b == 1)) {
+    echo ("Ambos igual a 1") . "<br>";;
+} else {
+    echo ("A ou B diferente de 1");
 }
-else
-{
-    echo("A ou B diferente de 1");
+
+//Or
+$a = 1;
+$b = 1;
+if (($a == 1) || ($b == 1)) {
+    echo ("A e B são iguais a 1");
+} else {
+    echo ("A e B diferentes de 1");
 }
+
+//Switch
+
+$num = 10;
+switch ($num) {
+    case 10;
+        echo "O valor é = $num";
+        break;
+    case 11;
+        echo "O valor é = $num";
+        break;
+    default:
+        echo "Outro valor";
+        break;
+}
+
 ?>
 
 
