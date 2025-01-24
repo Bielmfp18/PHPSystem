@@ -229,6 +229,7 @@ while($num<=10){
         <input type="submit" name="submit" value="Run" />
     </form>
     <?php 
+    //Super global $_GET
     $tabuada = $_GET['tab'];
     for($count=1; $count<=10; $count++)
     echo $tabuada." X ".$count." = ".($tabuada*$count)."<br />";
