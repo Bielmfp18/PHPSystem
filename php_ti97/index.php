@@ -36,4 +36,14 @@ echo intdiv(5,2), '<br>'; //parte inteiro
 echo round(5/2), '<br>'; //arredondar
 echo 5%2, '<br>'; //mod
 echo 5**2, '<br>'; //exp
+ 
+//Precedência = () > ** > / % * > + -
+
+echo 2+2*3, '<br>'; //8
+echo (2+2)*3, '<br>';//12
+echo 2+2*3**2,'<br>'; //20
+echo ((2+2)*3)**2; 
+
+
+
 ?>
