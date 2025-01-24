@@ -116,7 +116,7 @@ if ($c > $d) {
 if ($a > $b) {
     echo "A é maior que B" . "<br>";
 } elseif ($a == $b) {
-    echo "A é igual a B";
+    echo "A é igual a B". "<br>";
 }
 
 //And
@@ -126,16 +126,16 @@ $b = 1;
 if (($a == 1) && ($b == 1)) {
     echo ("Ambos igual a 1") . "<br>";;
 } else {
-    echo ("A ou B diferente de 1");
+    echo ("A ou B diferente de 1"). "<br>";
 }
 
 //Or
 $a = 1;
 $b = 1;
 if (($a == 1) || ($b == 1)) {
-    echo ("A e B são iguais a 1");
+    echo ("A e B são iguais a 1"). "<br>";
 } else {
-    echo ("A e B diferentes de 1");
+    echo ("A e B diferentes de 1"). "<br>";
 }
 
 //Switch
@@ -143,16 +143,34 @@ if (($a == 1) || ($b == 1)) {
 $num = 10;
 switch ($num) {
     case 10;
-        echo "O valor é = $num";
+        echo "O valor é = $num". "<br>";
         break;
     case 11;
-        echo "O valor é = $num";
+        echo "O valor é = $num". "<br>";
         break;
     default:
-        echo "Outro valor";
+        echo "Outro valor". "<br>";
         break;
+        
 }
 
+//Aspas Duplas
+
+$var="Mundo";
+echo("Olá $var"). "<br>";
+
+//Aspas Simples
+
+$var='Mundo';
+echo('Olá $var'). "<br>";
+
+//Frase com aspas simples e sem (\)
+$time="Real";
+echo'O $time é o "melhor" do mundo'. "<br>" ;
+
+//Frase com aspas duplas e com (\)
+$time="Real";
+echo"O $time é o \"melhor\" do mundo". "<br>";
 ?>
 
 
