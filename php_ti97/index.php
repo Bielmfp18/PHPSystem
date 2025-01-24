@@ -44,6 +44,23 @@ echo (2+2)*3, '<br>';//12
 echo 2+2*3**2,'<br>'; //20
 echo ((2+2)*3)**2; 
 
+?>
 
+<?php
 
+// Constantes
+//Constantes não alteram valores
+
+const nome = "Mariana";
+ echo nome."<br>";
+ define('valor', 10.00);
+ echo valor."<br>";
+
+//Array
+$frutas = ["Maçã", "Banana", "Laranja"];
+$cores = ["Vermelho", "Azul", "Amarelo"];
+
+echo $frutas [1]."<br>";
+
+echo $cores [1];
 ?>
