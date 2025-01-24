@@ -1,4 +1,7 @@
 <?
+//veja o resultado do código inteiro em: http://localhost/php_ti97/php_ti97/ não esqueça de ligar o Xampp!!!
+
+
 $inteiro = 100;
 $decimal = (float) $inteiro;
 var_dump($inteiro);
@@ -170,7 +173,67 @@ echo'O $time é o "melhor" do mundo'. "<br>" ;
 
 //Frase com aspas duplas e com (\)
 $time="Real";
-echo"O $time é o \"melhor\" do mundo". "<br>";
+echo"O $time é o \"melhor\" do mundo". "<br>". "<br>";
+
+//While
+//O comando de repetição while, necessita do auto incremento para funcionar
+$num=1;
+while($num<=10){
+echo("Valor de num = ".$num."<br>"). "<br>";
+///Auto incremento (num++)
+$num++;
+}
+
+//For
+//O For é uma estrutura de repetição como o while.
+for($n=1;$n<=10;$n++){
+echo("Valor de num =".$n."<br>"). "<br>" ;
+}
+
+//Exercício
+
+//TABUADA (For)  
+echo("TABUADA DO 5")."<br>"."<br>";
+$numero=5;
+$num=0;
+
+
+for($numero=5;$num<=10;$num++)
+echo ("$numero X $num = ".($numero * $num)."<br>")."<br>";
+
+//TABUADA (While)
+echo("TABUADA DO 7")."<br>"."<br>";
+$numero=7;
+$num=0;
+
+
+while($num<=10){
+    echo ("$numero X $num = ".($numero * $num)."<br>")."<br>";
+    $num++;
+}
+
+
 ?>
+
+<!-- CÓDIGO DA TABUADA HTML-PHP -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com PHP</title>
+</head>
+<body>
+    <form action="" method="get">
+        Tabuada do: <input type="text" name="tab" /><br />
+        <input type="submit" name="submit" value="Run" />
+    </form>
+    <?php 
+    $tabuada = $_GET['tab'];
+    for($count=1; $count<=10; $count++)
+    echo $tabuada." X ".$count." = ".($tabuada*$count)."<br />";
+    ?>
+</body>
+</html>
 
 
