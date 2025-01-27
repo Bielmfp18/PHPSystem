@@ -243,4 +243,22 @@ function soma($num_1, $num_2){
 
 $valor = soma(5,3);
 var_dump ($valor);
+
+//Função calcular raiz
+
+function calcularRaiz($numero) {
+    /// Verifica se o número é não-negativo
+    if ($numero < 0) {
+        return "Insira um número não-negativo. ";
+    }
+    //Calcula a raiz quadrada usando a função sqrt
+    $raizQuadrada = sqrt($numero);
+    /// Arredonda para duas casas decimais
+    $raizArredondada = round($raizQuadrada, 2);
+    return $raizArredondada;
+}
+// Exemplo de uso
+$numero = 3;
+$resultadp = calcularRaiz($numero);
+echo "A raiz quadrada de $numero é $resultado";
 ?>
