@@ -215,4 +215,18 @@ print_r($numeros);
 rsort($numeros);
 echo "Ordem descrente:\n";
 print_r($numeros);
+
+//Array de cores
+$cores = ["Vermelho", "Azul", "Amarelo", "Verde"];
+
+///Removendo o primeiro elemento
+array_shift($cores);
+print_r($cores);
+
+///Removendo o último elemento 
+array_pop($cores);
+print_r($cores);
+
+
+//FUNÇÃO
 ?>
