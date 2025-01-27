@@ -117,5 +117,14 @@ $pessoa = (object)$tipo;
 var_dump($pessoa);
 
 
+//<pre>
+
+$nomes = array(
+    1=> "Wilton",
+    2=> "Luciana",
+    3=> "Mariana");
+    echo'<pre>';
+    print_r($nomes);
+    echo'</pre>';
 
 ?>
