@@ -173,4 +173,46 @@ print_r($times["Time 1"]);
 
 $times["Times 2"][] = "Sevilla";
 print_r($times);
+
+
+//Array de aluno
+
+$aluno = [
+    "nome" => "João",
+    "idade" => 20,
+    "curso" => "Sistemas da informação"
+];
+
+// Adiconando novo campo
+$aluno["semestre"] = 4;
+
+//Exibindo valores
+echo "Nome: " . $aluno[0];
+echo "Idade: ". $aluno[1];
+echo "Curso: ". $aluno[2]; 
+
+//Array idades
+
+$idades = [18, 22, 35, 42, 15, 60, 25 ];
+
+///verificando se há idade 25
+if (in_array(25, $idades)) {
+    echo "A idade 25 foi encontrada";
+} else {
+    echo "A idade 25 não foi encontrada";
+}
+
+//Array de numeros
+
+$numeros = [3, 1, 4, 1, 5, 9, 2, 6];
+
+//Ordem crescente
+sort($numeros);
+echo "Ordem crescente: \n";
+print_r($numeros);
+
+// Ordem descrente
+rsort($numeros);
+echo "Ordem descrente:\n";
+print_r($numeros);
 ?>
