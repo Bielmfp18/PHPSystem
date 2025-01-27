@@ -127,4 +127,13 @@ $nomes = array(
     print_r($nomes);
     echo'</pre>';
 
+
+    //Isset
+
+    $nomes = array(
+        1=> "Wilton",
+        2=> "LUciana");
+        var_dump(isset($nome[1]));
+        echo"<br>";
+var_dump(isset($nomes[3]));
 ?>
