@@ -38,22 +38,38 @@ $totsl = count($dados);
 echo $total."<br>";
 echo $dados[3]."<br>";
 
-//print_r($variável aqui) e array_push($variável que recebe o valor da array aqui)
+///print_r($variável aqui) e array_push($variável que recebe o valor da array aqui)
 
 $dados = array("Nome",1,true);
 
-array_push($dados, "Ti_97")."<br>"."<br>"; //Joga o novo dado no fim da array
+array_push($dados, "Ti_97")."<br>"."<br>"; ///Joga o novo dado no fim da array
 
-// array_unshift($dados, "Ti_97"); // array_unshift($dados, "Ti_97");-> Joga o novo dado no início da array
+/// array_unshift($dados, "Ti_97"); /// array_unshift($dados, "Ti_97");-> Joga o novo dado no início da array
 
 print_r($dados)."<br>"."<br>";
 
 
-//array chave
-//=> = Operador associativo
+///array chave -> Adiciona um novo elemento a array através de um operador associativo (=>).
+///=> = Operador associativo
 $array = ["a"=>1, "b"=> 2];
 print_r ($array)."<br>"."<br>";
-$array["c"] = 3; // Adiciona um elemento com chave "c" 
+$array["c"] = 3; /// Adiciona um elemento com chave "c" 
 print_r($array)."<br>"."<br>";
+
+
+///Array com "registro"
+
+$array = [
+    "nome" => "Mariana",
+    "Idade" => 30,
+    "Cidade" => "São Paulo"
+];
+
+foreach ($array as $chave => $valor) {
+    echo "Chave: $chave, Valor: $valor\n"."<br>"."<br>"."<br>"; /// \n -> serve para pular linha. 
+}
+
+
+
 
 ?>
