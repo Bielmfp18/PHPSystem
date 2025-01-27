@@ -104,7 +104,17 @@ var_dump($str);
 $decimal = (double)$str;
 var_dump($decimal);
 
+//Inteiro
+$tipo = 100.50;
+var_dump($tipo);
+$int = (integer)$tipo; /// ou $int = (int)$tipo; -> Os 2 funcionam da mesma maneira
+var_dump($int);
 
+//Objeto
+$tipo = ["Mariana", 30];
+var_dump($tipo);
+$pessoa = (object)$tipo;
+var_dump($pessoa);
 
 
 
