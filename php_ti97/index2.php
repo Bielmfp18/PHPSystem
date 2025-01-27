@@ -37,4 +37,11 @@ $dados[] = 4; //Adiciona o elemento 4 ao final da array
 $totsl = count($dados);
 echo $total."<br>";
 echo $dados[3]."<br>";
+
+//print_r($variável aqui) e array_push($variável que recebe o valor da array aqui)
+$dados = array("Nome",1,true);
+array_push($dados, "Ti_97"); //Joga o novo dado no fim da array
+// array_unshift($dados, "Ti_97"); // array_unshift($dados, "Ti_97");-> Joga o novo dado no início da array
+print_r($dados);
+
 ?>
