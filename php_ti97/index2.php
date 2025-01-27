@@ -156,6 +156,20 @@ echo'</pre>';
 
 $array = [1,2,3];
 $teste = is_array($array);
-var_dump($teste);
-?>
 
+
+///Array update
+$times = [
+    "Time 1" => ["São Paulo", "Santos", "Palmeiras"],
+    "Time 2" => ["Barcelona", "Real Madrid", "Atlético de Madrid"]
+];
+
+/// EXibindo times brasileiros
+echo "Times brasileiros: "."</br>";
+print_r($times["Time 1"]);
+
+/// Adicionando novo time
+
+$times["Times 2"][] = "Sevilla";
+print_r($times);
+?>
