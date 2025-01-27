@@ -82,14 +82,23 @@ print_r ($array)."<br>";
 //Array dentro de uma array
 
 $pessoa=['Nome' => "Gabriel Martins", 'Idade'=> '18', 'documentos'=>['cpf'=>123456, 'rg'=>123456]];
-print_r($pessoa['documentos'])."<br>";
+print_r($pessoa['documentos'])."<br>"."<br>";
 ///print_r($pessoa['documentos'] ['cpf']); -> Mostra um dado especifíco da array.
 
 
-//Dados boolean
+//Conversão de tipo
 
-$tipo = "Gabriel"; ///Sem um valor na variavel tipo, o bool retornará falso.
+
+//Dados boolean (conversão)
+
+$tipo = "Gabriel"."<br>"; ///Sem um valor na variavel tipo, o bool retornará falso.
 $bool = (boolean)$tipo;
-var_dump($bool);///Bool retorna true, pois, este recebe uma valor, após a conversão. 
+var_dump($bool)."<br>"; ///Bool retorna true, pois, este recebe uma valor, após a conversão. 
 
+
+//Dados string (Conversão)
+$tipo=100;
+var_dump($tipo);
+$str = (string)$tipo;
+var_dump($str);
 ?>
