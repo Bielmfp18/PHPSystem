@@ -139,7 +139,7 @@ var_dump(isset($nomes[3]));
 
 
 
-//Unset-> remover elementos
+//Unset-> remover elementos.
 
 $nomes = array(
 1=> "Gabriel",
