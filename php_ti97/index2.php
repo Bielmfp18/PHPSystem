@@ -229,4 +229,18 @@ print_r($cores);
 
 
 //FUNÇÃO
+
+function teste($n){
+    echo " Teste de função = $n";
+}
+teste(1);
+
+function soma($num_1, $num_2){
+    $total = $num_1 + $num_2;
+    return $total;
+
+}
+
+$valor = soma(5,3);
+var_dump ($valor);
 ?>
