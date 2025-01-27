@@ -76,8 +76,13 @@ $array2 = [4,5];
 
 $array = array_merge($array1, $array2); ///array_merge -> serve para mesclar os arrays
 
-print_r ($array);
+print_r ($array)."<br>";
 
 
+//Array dentro de uma array
+
+$pessoa=['Nome' => "Gabriel Martins", 'Idade'=> '18', 'documentos'=>['cpf'=>123456, 'rg'=>123456]];
+print_r($pessoa['documentos'])."<br>";
+///print_r($pessoa['documentos'] ['cpf']); -> Mostra um dado especifíco da array.
 
 ?>
