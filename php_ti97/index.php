@@ -254,6 +254,14 @@ var_dump($dados2);
 
 $dados = ("Nome", 1, true);
 var_dump = ($dados = [0]);
-$val = $dados[0];
+$val = $dados[0]; /// ou echo $dados = [0]; -> para mostrar a variável dados no arquivo.
+///print_r() -> MOstra uma array no arquivo.
 
+//Troca valor
+
+$dados = array("Nome",1,true);
+$nome = $dados[0];
+echo $nome;
+$nome = $dados[0] = "Mariana";
+echo $nome;
 ?>
