@@ -101,4 +101,11 @@ $tipo=100;
 var_dump($tipo);
 $str = (string)$tipo;
 var_dump($str);
+$decimal = (double)$str;
+var_dump($decimal);
+
+
+
+
+
 ?>
