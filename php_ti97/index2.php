@@ -1,3 +1,4 @@
+
 <!-- ------------------------------------------------------------------------------- -->
 
                     <!-- 2ª Aula de PHP (Wilton Santos) -->
@@ -117,5 +118,59 @@ $pessoa = (object)$tipo;
 var_dump($pessoa);
 
 
+//<pre>
 
+$nomes = array(
+    1=> "Wilton",
+    2=> "Luciana",
+    3=> "Mariana");
+    echo'<pre>';
+    print_r($nomes);
+    echo'</pre>';
+
+
+    ///Isset.
+
+    $nomes = array(
+        1=> "Wilton",
+        2=> "LUciana");
+        var_dump(isset($nome[1]));
+        echo"<br>";
+var_dump(isset($nomes[3]));
+
+
+
+//Unset-> remover elementos..
+
+$nomes = array(
+1=> "Gabriel",
+2=> "Cirlene",
+3=> "Sergio");
+
+unset($nomes[3]);
+
+echo'<pre>';
+print_r($nomes);
+echo'</pre>';
+
+//is_array -> Saber se é array
+
+$array = [1,2,3];
+$teste = is_array($array);
+
+
+///Array update
+$times = [
+    "Time 1" => ["São Paulo", "Santos", "Palmeiras"],
+    "Time 2" => ["Barcelona", "Real Madrid", "Atlético de Madrid"]
+];
+
+/// EXibindo times brasileiros
+echo "Times brasileiros: "."</br>";
+print_r($times["Time 1"]);
+
+/// Adicionando novo time
+
+$times["Times 2"][] = "Sevilla";
+print_r($times);
 ?>
