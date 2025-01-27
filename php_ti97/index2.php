@@ -85,4 +85,6 @@ $pessoa=['Nome' => "Gabriel Martins", 'Idade'=> '18', 'documentos'=>['cpf'=>1234
 print_r($pessoa['documentos'])."<br>";
 ///print_r($pessoa['documentos'] ['cpf']); -> Mostra um dado especifíco da array.
 
+
+
 ?>
