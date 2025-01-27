@@ -136,4 +136,19 @@ $nomes = array(
         var_dump(isset($nome[1]));
         echo"<br>";
 var_dump(isset($nomes[3]));
+
+
+
+//Unset-> remover elementos
+
+$nomes = array(
+1=> "Gabriel",
+2=> "Cirlene",
+3=> "Sergio");
+
+unset($nomes[3]);
+
+echo'<pre>';
+print_r($nomes);
+echo'</pre>';
 ?>
