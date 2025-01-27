@@ -232,9 +232,28 @@ while($num<=10){
     //Super global $_GET
     $tabuada = $_GET['tab'];
     for($count=1; $count<=10; $count++)
-    echo $tabuada." X ".$count." = ".($tabuada*$count)."<br />";
+    echo $tabuada." X ".$count." = ".($tabuada*$count)."<br>"."<br>";
     ?>
 </body>
 </html>
 
+<!-- ------------------------------------------------------------------------------- -->
 
+                    <!-- 2ª Aula de PHP (Wilton Santos) -->
+
+<!-- ------------------------------------------------------------------------------- -->
+
+<?php
+//array 
+$dados = array("Nome",1,true);
+var_dump($dados);
+$dados2 = ["Nome",2,false];
+var_dump($dados2);
+
+//var_dump
+
+$dados = ("Nome", 1, true);
+var_dump = ($dados = [0]);
+$val = $dados[0];
+
+?>
