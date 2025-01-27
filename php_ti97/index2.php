@@ -139,7 +139,7 @@ var_dump(isset($nomes[3]));
 
 
 
-//Unset-> remover elementos.
+//Unset-> remover elementos..
 
 $nomes = array(
 1=> "Gabriel",
@@ -151,4 +151,11 @@ unset($nomes[3]);
 echo'<pre>';
 print_r($nomes);
 echo'</pre>';
+
+//is_array -> Saber se é array
+
+$array = [1,2,3];
+$teste = is_array($array);
+var_dump($teste);
 ?>
+
