@@ -57,7 +57,7 @@ $array["c"] = 3; /// Adiciona um elemento com chave "c"
 print_r($array)."<br>"."<br>";
 
 
-///Array com "registro"
+//Array com "registro"
 
 $array = [
     "nome" => "Mariana",
@@ -69,6 +69,14 @@ foreach ($array as $chave => $valor) {
     echo "Chave: $chave, Valor: $valor\n"."<br>"."<br>"."<br>"; /// \n -> serve para pular linha. 
 }
 
+
+//mesclar array
+$array1 = [1,2,3];
+$array2 = [4,5];
+
+$array = array_merge($array1, $array2); ///array_merge -> serve para mesclar os arrays
+
+print_r ($array);
 
 
 
