@@ -128,7 +128,7 @@ $nomes = array(
     echo'</pre>';
 
 
-    //Isset
+    ///Isset
 
     $nomes = array(
         1=> "Wilton",
