@@ -86,5 +86,10 @@ print_r($pessoa['documentos'])."<br>";
 ///print_r($pessoa['documentos'] ['cpf']); -> Mostra um dado especifíco da array.
 
 
+//Dados boolean
+
+$tipo = "Gabriel"; ///Sem um valor na variavel tipo, o bool retornará falso.
+$bool = (boolean)$tipo;
+var_dump($bool);///Bool retorna true, pois, este recebe uma valor, após a conversão. 
 
 ?>
