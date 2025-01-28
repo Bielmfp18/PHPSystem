@@ -257,7 +257,7 @@ function calcularRaiz($numero) {
     $raizArredondada = round($raizQuadrada, 2);
     return $raizArredondada;
 }
-// Exemplo de uso
+// Exemplo de uso.
 $numero = 3;
 $resultadp = calcularRaiz($numero);
 echo "A raiz quadrada de $numero é $resultado";
