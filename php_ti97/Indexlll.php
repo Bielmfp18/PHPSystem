@@ -41,9 +41,10 @@ echo strtolower($str)."<br>"; //Saída: Teste de string
 
 
 //Contando as variáveis
-$str = substr($str, 7, 5); //Começa no índice 7 e pega 5 caracteres
-echo $sub; // Saída: World
+$str =" Hello World!";
+$sub = substr($str, 7, 5); //Começa no índice 7 e pega 5 caracteres
+echo $sub."<br>"; // Saída: World
 
-$sttr = "123";
-echo strrev($str);//Saída: 321
+$str = "123";
+echo strrev($str)."<br>"; //Saída: 321
 ?>
