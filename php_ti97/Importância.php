@@ -37,5 +37,10 @@
 
 <p>Algumas práticas de Green IT são: Reciclagem e recondicionamento de hardware, Descarte correto de resíduos eletrônicos, Incentivo ao home office. 
 Para implementar a Green IT, é importante que todos estejam engajados e alinhados com as novas necessidades. </p>
+
+
+<hr>
+<p>© Copyright Tirador Chopp Boutique - 2021</p>
+
 </body>
 </html>
