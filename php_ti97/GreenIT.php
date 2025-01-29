@@ -16,8 +16,9 @@
 
         nav {
 
-            color: green;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+
         }
 
         div {
@@ -31,22 +32,14 @@
 
 <body>
     <header>
-        <div>
+        <div class = "background">
 
             <nav class="nav">
                 <ul>
-                    <li>
-                        <a href="GreenIT.php">Início</a>
-                    </li>
-                    <li>
-                        <a href="Importância.php">Importância</a>
-                    </li>
-                    <li>
-                        <a href="Beneficios.php">Beneficios</a>
-                    </li>
-                    <li>
-                        <a href="Cadastro.php">Cadastro</a>
-                    </li><br>
+                    <li> <a href="GreenIT.php">Início</a></li>
+                    <li><a href="Importância.php">Importância</a></li>
+                    <li><a href="Beneficios.php">Beneficios</a></li>
+                    <li><a href="Cadastro.php">Cadastro</a></li><br>
 
                 </ul>
             </nav>
