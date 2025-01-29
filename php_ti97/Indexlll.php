@@ -25,5 +25,18 @@ echo str_repeat($str, 3); //Saída: Olá Olá Olá
 
 $texto = "Eu gosto de PHP.";
 $resultado = str_replace("PHP", "JavaScript", $texto);
-echo $resultado;
+echo $resultado."<br>";
+
+$str = "Maçã, Banana, Laranja";
+$array = explode(",", $str);
+print_r($array);//Retira a vírgula
+
+$array = ["Maçã, Banana, Laranja"];
+$str = implode(",", $array);
+print_r($array); // Mantém a vírgula
+
+$str = "Teste de String";
+echo strtolower($str)."<br>"; //Saída: Teste de string
+echo strtolower($str)."<br>"; //Saída: Teste de string
+
 ?>
