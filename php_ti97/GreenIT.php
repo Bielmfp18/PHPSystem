@@ -14,17 +14,16 @@
             font-size: 25px;
         }
 
-        nav {
-
-
-
+        .background {
+            padding: 0px 500px;
+       
 
         }
 
         div {
-           display: grid;
-           justify-content: center ;
-           border: 35px;
+            display: grid;
+            justify-content: center;
+            border: 35px;
         }
     </style>
 
@@ -32,8 +31,7 @@
 
 <body>
     <header>
-        <div class = "background">
-
+        <div class="background">
             <nav class="nav">
                 <ul>
                     <li> <a href="GreenIT.php">Início</a></li>
@@ -43,7 +41,7 @@
 
                 </ul>
             </nav>
-<hr>
+            <hr>
             <h1 class="green">O que é Green IT?</h1><br>
 
             <p>Essa iniciativa busca um equilíbrio entre o progresso tecnológico e a preservação ambiental, criando soluções mais conscientes para os desafios modernos. </p><br>
@@ -69,13 +67,15 @@
 
                 Esses equipamentos também possuem vida útil mais longa, reduzindo a necessidade de substituição frequente.</p><br>
 
-        <hr>
-        <!-- <span>&#169;</span> -->
-        <p>© Copyright Tirador Chopp Boutique - 2025</p>
+            <hr>
+            <!-- <span>&#169;</span> -->
+            <p>© Copyright Tirador Chopp Boutique - 2025</p>
+        </div>
     </header>
 </body>
+
 </html>
-</div>
+
 <?php
 
 
