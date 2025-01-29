@@ -23,6 +23,7 @@
         div {
            display: grid;
            justify-content: center ;
+           border: 35px;
         }
     </style>
 
@@ -74,15 +75,14 @@
             <p>Investir em equipamentos certificados, como monitores e servidores com Energy Star, garante um consumo menor de energia e uma operação mais eficiente.
 
                 Esses equipamentos também possuem vida útil mais longa, reduzindo a necessidade de substituição frequente.</p><br>
-        </div>
+
         <hr>
         <!-- <span>&#169;</span> -->
-        <p>© Copyright Tirador Chopp Boutique - 2021</p>
+        <p>© Copyright Tirador Chopp Boutique - 2025</p>
     </header>
 </body>
-
 </html>
-
+</div>
 <?php
 
 

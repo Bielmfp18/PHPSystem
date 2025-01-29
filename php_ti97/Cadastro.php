@@ -6,7 +6,7 @@
     <title>Cadastro</title>
     <style>
 
-        
+
     </style>
 </head>
 <body>
@@ -40,7 +40,7 @@
         <input type="submit" value="Cadastrar"></input>
         <br><br>
 <hr><br>
-<p>© Copyright Tirador Chopp Boutique - 2021</p>
+<p>© Copyright Tirador Chopp Boutique - 2025</p>
 
 </body>
 </html>

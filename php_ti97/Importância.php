@@ -40,7 +40,7 @@ Para implementar a Green IT, é importante que todos estejam engajados e alinhad
 
 
 <hr>
-<p>© Copyright Tirador Chopp Boutique - 2021</p>
+<p>© Copyright Tirador Chopp Boutique - 2025</p>
 
 </body>
 </html>

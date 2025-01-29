@@ -71,7 +71,7 @@ Nem sempre pensamos no consumo e impacto ambiental da cloud computing, especialm
 </p>
 <br><br><br>
 <hr><br><br>
-<p>© Copyright Tirador Chopp Boutique - 2021</p>
+<p>© Copyright Tirador Chopp Boutique - 2025</p>
 <br><br>
 <hr>
 </body>
