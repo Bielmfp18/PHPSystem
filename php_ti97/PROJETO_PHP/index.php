@@ -31,7 +31,7 @@
               Login
             </div>
             <div class="card-body">
-              <form action = "validar.php"> <!--action é o destino no qual será validado no código-->
+              <form action = "validar.php" method="post"> <!--action é o destino no qual será validado no código-->
                 <div class="form-group">
                   <input name = "email" type="email" class="form-control" placeholder="E-mail">
                 </div>
