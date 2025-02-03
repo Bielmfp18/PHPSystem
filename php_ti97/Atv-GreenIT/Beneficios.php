@@ -30,7 +30,7 @@
             <div class="texto1">
                 <p>
                     <li>Atendimento a normas ambientais: Adoção de práticas Green IT ajuda as empresas a estarem em conformidade com as regulamentações ambientais e de sustentabilidade.</li>
-                </p><br>
+                </p>
        
            
                 <p>
@@ -42,7 +42,7 @@
             <div class="texto1">
                 <p>
                     <li>Fortalecimento da marca: Empresas que adotam práticas ambientais responsáveis ganham uma imagem positiva, o que pode atrair consumidores mais conscientes e investidores interessados em práticas sustentáveis.</li>
-                </p><br>
+                </p>
           
                 <p>
                     <li>Vantagem competitiva: A adoção de soluções sustentáveis pode ser um diferencial em mercados cada vez mais orientados para o meio ambiente.</li>
@@ -53,7 +53,7 @@
             <div class="texto1">
                 <p>
                     <li>Adoção de novas tecnologias: A busca por soluções mais verdes pode acelerar o desenvolvimento de inovações tecnológicas, como novos sistemas de armazenamento de energia ou computação em nuvem mais eficiente.</li>
-                </p><br>
+                </p>
      
                 <p>
                     <li>Integração de práticas sustentáveis em novos projetos: A sustentabilidade pode ser um dos pilares na criação de novos produtos e soluções de TI.</li>
@@ -64,7 +64,7 @@
             <div class="texto1">
                 <p>
                     <li>Ambientes mais saudáveis: Redução de toxinas e produtos químicos nos equipamentos de TI pode melhorar a qualidade do ambiente de trabalho e da saúde dos colaboradores.</li>
-                </p><br>
+                </p>
           
                 <p>
                     <li>Menos radiação: Equipamentos mais eficientes geralmente emitem menos radiação eletromagnética, criando um ambiente de trabalho mais seguro.</li>
@@ -75,7 +75,7 @@
             <div class="texto1">
                 <p>
                     <li>Uso racional de materiais: A Green IT incentiva a reutilização de componentes e a minimização do uso de recursos naturais, como minerais e metais raros.</li>
-                </p><br>
+                </p>
          
                 <p>
                     <li>Redução do impacto de mineração: Com menos necessidade de novos componentes, a extração de materiais do meio ambiente é diminuída.</li>
