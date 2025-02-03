@@ -82,5 +82,8 @@ nav ul li a:hover {
 
     .texto1{
         font-size: 18px;
+        flex-direction: row;
+        justify-content: baseline;
 
     }
+

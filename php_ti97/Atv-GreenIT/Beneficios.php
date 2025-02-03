@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benefícios</title>
     <link rel="stylesheet" href="GreenIT.css">
 </head>
+
 <body>
     <header>
         <div class="cabecalho">
@@ -29,8 +31,8 @@
                 <p>
                     <li>Atendimento a normas ambientais: Adoção de práticas Green IT ajuda as empresas a estarem em conformidade com as regulamentações ambientais e de sustentabilidade.</li>
                 </p><br>
-            </div>
-            <div class="texto1">
+       
+           
                 <p>
                     <li>Redução de riscos legais: Minimizar a pegada ambiental também ajuda a evitar possíveis penalidades por descumprimento de leis ambientais.</li>
                 </p><br>
@@ -88,5 +90,5 @@
 
         </div>
     </header>
-</body>
-</html>
+    </body>
+    </html>
