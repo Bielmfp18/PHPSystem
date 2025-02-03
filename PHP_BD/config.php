@@ -2,7 +2,7 @@
 
 //Parâmetros para a conexão com o Banco de Dados
 
-$bd = 'mysql:host=localhost; Atividade';
+$bd = 'mysql:host=localhost; atividade';
 $usuario = 'root';
 $senha = '';
 
