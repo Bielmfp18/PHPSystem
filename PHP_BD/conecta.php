@@ -10,7 +10,7 @@ $senha = '';
 
 //$conn = $bd,$usuario,$senha;
 try {
-    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está dispnível no PHP para a conexão com o PHP.
+    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está disponível no PHP para a conexão com o Banco de Dados. 
     $query = '
     Use bd_ti97;
     create table usuarios2(

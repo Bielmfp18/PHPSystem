@@ -2,7 +2,7 @@
 
 //Parâmetros para a conexão com o Banco de Dados
 
-$bd = 'mysql:host=localhost; atividade';
+$bd = 'mysql:host=localhost;dbname=atividade';
 $usuario = 'root';
 $senha = '';
 
@@ -10,7 +10,7 @@ $senha = '';
 
 //$conn = $bd,$usuario,$senha;
 try {
-    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está dispnível no PHP para a conexão com o PHP.
+    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está disponível no PHP para a conexão com o Banco de Dados..
    
 // echo "BD ok";
 // $retorno = $conn->exec($query); //exec -> Executar o que estiver dentro dos parênteses;

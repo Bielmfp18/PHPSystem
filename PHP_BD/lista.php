@@ -1,5 +1,5 @@
 <?php 
-require 'config.php'; //Para chamar a página com os dados do login.
+ require 'config.php';//Para chamar a página com os dados do login.
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
