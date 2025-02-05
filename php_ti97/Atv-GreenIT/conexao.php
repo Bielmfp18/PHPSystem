@@ -2,7 +2,7 @@
 $servername = 'localhost'; 
 $usuario = 'root';
 $senha = '';
-$database = 'greenIT';
+$database = 'greenit';
 //Conexão com o Banco de Dados
 $conn = new mysqli($servername, $usuario, $senha, $database);
 //Aviso de falha na conexão 

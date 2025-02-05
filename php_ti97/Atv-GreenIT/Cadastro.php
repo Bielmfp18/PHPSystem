@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="GreenIT.css">
-
 </head>
 <body>
     <header>
@@ -25,7 +24,7 @@
         <div class="background1">
 
         <h1>Cadastro</h1>
-        <hr>
+        <form action="cad.php" method="post">
     <div class="cadastro">
         <label for="nome">Nome</label><br>
         <input type="text" id="nome"><br><br>
@@ -41,7 +40,8 @@
 <p> © Copyright Green IT - 2025</p>
 
 </div>
+</form>
 </body>
 </html>
 
-<?php ?>
+
