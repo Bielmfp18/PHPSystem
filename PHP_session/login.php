@@ -18,6 +18,14 @@ if($result && $result->num_rows>0){
     $_SESSION['usuario']=$usuario;
     echo"Loginrealizado com sucesso! Bem-Vindo, ".$usuario;
 }
+else{
+    //Falha no logon
+echo"Usuário ou senha incorretos!";
+
+}
+    //Fecha conexão
+    $conn->close();
+
 }
 
 ?>
