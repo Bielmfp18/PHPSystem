@@ -1,0 +1,6 @@
+<?php 
+
+//Criar session
+
+
+?>
