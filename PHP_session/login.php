@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 //Verifica se encontrou algum registro
 if($result && $result->num_rows>0){
     $_SESSION['usuario']=$usuario;
-    echo"Loginrealizado com sucesso! Bem-Vindo, ".$usuario;
+    echo"Loginrealizado com sucesso Bem-Vindo, ".$usuario."!";
 }
 else{
     //Falha no logon
