@@ -7,6 +7,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $data_nascimento = $_POST['data_nascimento'];
 
     try{
+$pdo = new PDO($bd, $usuario, $senha);
 $sql = "INSERT INTO usuario (nome, email, cpf, data_nascimento)
 VALUES (:nome, :email, :cpf, :data_nascimento)";
 $stmt = $pdo->prepare($sql);
