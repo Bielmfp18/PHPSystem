@@ -13,21 +13,14 @@ if(isset ($_POST['usuario'])&& isset($_POST['senha'])&&isset($_POST['telefone'])
     $data_nascimento = $_POST['data_nascimento'];
 
     //Adiciona o cadastro ao Banco de dados
-    $sql = "INSERT INTO usuarios (usuario, senha, telefone, data_nascimento) VALUES ('usuario', 'senha', 'telefone', 'data_nascimento')";
+    $sql = "INSERT INTO usuarios (usuario, senha, telefone, data_nascimento) VALUES ('$usuario', '$senha', '$telefone', '$data_nascimento')";
 $result = $conn->query($sql);
 
-if(mysqli_query($conn, $sql)){
-
-    echo"Cadastro realizado com sucesso Bem-Vindo, ".$usuario."!";
-}
-else{
-    //Falha no logon
-echo"Falha ao cadastrar!";
 
 }
     //Fecha conexão
     $conn->close();
 
-}
+
 
 ?>
