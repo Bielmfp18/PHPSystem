@@ -10,7 +10,7 @@ $senha = '';
 
 //$conn = $bd,$usuario,$senha;
 try {
-    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está disponível no PHP para a conexão com o Banco de Dados..
+    $conn = new PDO($bd, $usuario, $senha); //PDO -> É uma classe que está disponível no PHP para a conexão com o Banco de Dados.
    
 // echo "BD ok";
 // $retorno = $conn->exec($query); //exec -> Executar o que estiver dentro dos parênteses;
