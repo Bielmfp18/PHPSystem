@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="GreenIT.css">
 </head>
+
 <body>
     <header>
         <div class="cabecalho">
@@ -23,25 +25,87 @@
         </div>
         <div class="background1">
 
-        <h1>Cadastro</h1>
-        <form action="cad.php" method="post">
-    <div class="cadastro">
-        <label for="nome">Nome</label><br>
-        <input type="text" id="nome"><br><br>
-        <label for="senha">Senha</label><br>
-        <input type="text" id="senha"><br><br>
-        <label for="Telefone">Telefone</label><br>
-        <input type="text" id="Telefone"><br><br><br>
-        <label for="Data">Data de Nascimento</label><br>
-        <input type="date" id="Data"><br><br><br>
-        <input type="submit" value="Cadastrar"></input>
+            <h1>Cadastro</h1>
+            <form action="cadastro.php" method="post">
+                <div class="cadastro">
+                    <label for="nome">Nome</label><br>
+                    <input type="text" name="nome" id="nome"><br><br>
+                    <label for="senha">Senha</label><br>
+                    <input type="text" name="senha" id="senha"><br><br>
+                    <label for="telefone">Telefone</label><br>
+                    <input type="text" name="telefone" id="telefone"><br><br><br>
+                    <label for="data_nascimento">Data de Nascimento</label><br>
+                    <input type="date" name="data_nascimento" id="data_nascimento"><br><br><br>
+                    <input type="submit" value="Cadastrar">
+                </div>
+            </form>
+
         </div>
         <br><br><br>
-<p> © Copyright Green IT - 2025</p>
+        <p> © Copyright Green IT - 2025</p>
 
-</div>
-</form>
+
 </body>
+
 </html>
 
+<?php
+// Inclua o arquivo de conexão
+require("conexao.php");
 
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
+    $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
+    $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
+    $data_nascimento = isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : '';
+}
+
+// Verifica se todos os campos foram preenchidos
+if (empty($nome) || empty($senha) || empty($telefone) || empty($data_nascimento)) {
+    echo "<script>alert('Preencha todos os campos, por favor!');</script>";
+} else {
+    // Converte a data para o formato correto
+    $data_nascimento = date('Y-m-d', strtotime($data_nascimento));
+
+    // Hash da senha para segurança
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+
+
+    // Prepara a query para inserção no banco de dados
+    $sql = "INSERT INTO usuario (nome, senha, telefone, data_nascimento) VALUES (?, ?, ?, ?)";
+if ($stmt = $conn->prepare($sql)) {
+            // Vincula os parâmetros da query
+            $stmt->bind_param("ssss", $nome, $senha_hash, $telefone, $data_nascimento);
+
+            // Executa a query e verifica se ocorreu com sucesso
+            if ($stmt->execute()) {
+                echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
+                echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
+            } else {
+                // Caso ocorra um erro na execução, exibe o erro
+                echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
+            }
+
+
+    // Executa a query e verifica se ocorreu com sucesso
+    if ($stmt->execute()) {
+        echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
+        echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
+    } else {
+        // Caso ocorra um erro na execução, exibe o erro
+        echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
+    }
+
+        // Fecha a conexão
+        $stmt->close();
+    } else {
+        echo "<script>alert('Erro ao preparar a query: " . $conn->error . "');</script>";
+    }
+
+    // Fecha a conexão com o banco de dados
+    $conn->close();
+
+}
+
+?>
