@@ -1,3 +1,12 @@
+<?php 
+require("Painel.php");]
+
+    session_start();
+if(!isset($_SESSION)){
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
