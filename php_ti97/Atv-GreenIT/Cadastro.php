@@ -40,10 +40,14 @@
                 </div>
             </form>
 
-        </div>
+        
         <br><br><br>
-        <p> © Copyright Green IT - 2025</p>
-
+        <div class="texto1">
+            <p>© Copyright Green IT - 2025</p>
+            </div>
+        </div>
+    </div>
+    </header>
 
 </body>
 
@@ -74,28 +78,28 @@ if (empty($nome) || empty($senha) || empty($telefone) || empty($data_nascimento)
 
     // Prepara a query para inserção no banco de dados
     $sql = "INSERT INTO usuario (nome, senha, telefone, data_nascimento) VALUES (?, ?, ?, ?)";
-if ($stmt = $conn->prepare($sql)) {
-            // Vincula os parâmetros da query
-            $stmt->bind_param("ssss", $nome, $senha_hash, $telefone, $data_nascimento);
+    if ($stmt = $conn->prepare($sql)) {
+        // Vincula os parâmetros da query
+        $stmt->bind_param("ssss", $nome, $senha_hash, $telefone, $data_nascimento);
 
-            // Executa a query e verifica se ocorreu com sucesso
-            if ($stmt->execute()) {
-                echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
-                echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
-            } else {
-                // Caso ocorra um erro na execução, exibe o erro
-                echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
-            }
+        // Executa a query e verifica se ocorreu com sucesso
+        if ($stmt->execute()) {
+            echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
+            echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
+        } else {
+            // Caso ocorra um erro na execução, exibe o erro
+            echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
+        }
 
 
-    // Executa a query e verifica se ocorreu com sucesso
-    if ($stmt->execute()) {
-        echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
-        echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
-    } else {
-        // Caso ocorra um erro na execução, exibe o erro
-        echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
-    }
+        // Executa a query e verifica se ocorreu com sucesso
+        if ($stmt->execute()) {
+            echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
+            echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
+        } else {
+            // Caso ocorra um erro na execução, exibe o erro
+            echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
+        }
 
         // Fecha a conexão
         $stmt->close();
@@ -105,7 +109,6 @@ if ($stmt = $conn->prepare($sql)) {
 
     // Fecha a conexão com o banco de dados
     $conn->close();
-
 }
 
 ?>

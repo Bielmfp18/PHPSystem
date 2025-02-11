@@ -82,7 +82,9 @@
                 </p><br>
             </div>
 
+            <div class="texto1">
             <p>© Copyright Green IT - 2025</p>
+            </div>
 
         </div>
     </header>

@@ -76,7 +76,9 @@ A utilização de tecnologia de nuvem também se destaca como uma prática funda
 
 
 <br>
-<p>© Copyright Green IT - 2025</p>
+<div class="texto1">
+            <p>© Copyright Green IT - 2025</p>
+            </div>
 
 </div>
 </body>

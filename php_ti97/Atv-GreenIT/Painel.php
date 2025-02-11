@@ -1,10 +1,8 @@
 <?php 
-require("Painel.php");]
 
-    session_start();
-if(!isset($_SESSION)){
+include('protect.php');
 
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +13,9 @@ if(!isset($_SESSION)){
     <title>Painel</title>
 </head>
 <body>
-    Bem-vindo ao Painel, <?php echo $_SESSION['nome'];?>
+    Bem-vindo ao Painel, <?php echo $_SESSION['email'];?>
+    <p>
+        <a href="logout.php">Sair</a>
+    </p>
 </body>
 </html>
