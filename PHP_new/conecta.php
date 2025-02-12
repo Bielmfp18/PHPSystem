@@ -75,6 +75,7 @@ $cmd->execute();
 //fetch = uma única linha, ALL = mais de um registro
 //fetch = buscar
 //Traz os valores do Banco de Dados.
+$resultado = $cmd->fetch(PDO::FETCH_ASSOC);
 $valores = $cmd->fetch(PDO::FETCH_ASSOC);
 foreach($valores as $val=> $value){;
 //Formata os valores fornecidos na página.
