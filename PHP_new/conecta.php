@@ -65,5 +65,29 @@ catch(Exception $e){
 
 $cmd = $pdo->query("UPDATE usuario SET nome = 'Sergio Ricardo ' WHERE id = '13'");
 
+//Select 
+//select * from tabela where id = 1;
+//Pdo é como se fosse um driver para o php se conectar ao banco e receber seus comandos e valores.
+$cmd = $pdo->prepare("SELECT * FROM usuario WHERE id = :id ");
+$cmd->bindValue(":id", 13);
+$cmd->execute();
+
+//fetch = uma única linha, ALL = mais de um registro
+//fetch = buscar
+//Traz os valores do Banco de Dados.
+$valores = $cmd->fetch(PDO::FETCH_ASSOC);
+foreach($valores as $val=> $value){;
+//Formata os valores fornecidos na página.
+
+echo'<pre>';
+echo $val.":".$value."<br>";
+// var_dump($valores);
+echo'</pre>';
+
+}
+
+
+
 ?>
+
 
