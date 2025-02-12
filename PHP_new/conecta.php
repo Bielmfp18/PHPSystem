@@ -24,6 +24,13 @@ catch(Exception $e){
 }
 
 
-
-
+//Insert
+//bind + vincular
+$cmd = $pdo->prepare("INSERT INTO usuario(nome, email, telefone)values(:n, :e, :t)");
+//Vincula o nome Gabriel ao valor "n:"
+//Vincula os valores aos parâmetros.
+$cmd->bindValue(":n","Cirlene");
+$cmd->bindValue(":e","cirlenem@gmaill.com");
+$cmd->bindValue(":t","11984567392");
+$cmd->execute();
 ?>
