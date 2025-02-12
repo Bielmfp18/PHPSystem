@@ -53,10 +53,17 @@ catch(Exception $e){
 // $cmd->bindValue(":cod", $cod);
 // $cmd->execute();
 
-//Desafio
-$cod = 1;
-$cmd = $pdo->query("DELETE FROM usuario where id = '$cod' ");
-$cmd->execute();
+// //Desafio
+// $cod = 1;
+// $cmd = $pdo->query("DELETE FROM usuario where id = '$cod' ");
+// $cmd->execute();
+
+
+//Update
+
+//update com query
+
+$cmd = $pdo->query("UPDATE usuario SET nome = 'Sergio Ricardo ' WHERE id = '13'");
 
 ?>
 
