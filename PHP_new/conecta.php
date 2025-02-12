@@ -24,13 +24,39 @@ catch(Exception $e){
 }
 
 
-//Insert
-//bind + vincular
-$cmd = $pdo->prepare("INSERT INTO usuario(nome, email, telefone)values(:n, :e, :t)");
-//Vincula o nome Gabriel ao valor "n:"
-//Vincula os valores aos parâmetros.
-$cmd->bindValue(":n","Cirlene");
-$cmd->bindValue(":e","cirlenem@gmaill.com");
-$cmd->bindValue(":t","11984567392");
+// //Insert
+// //bind + vincular
+// $cmd = $pdo->prepare("INSERT INTO usuario(nome, email, telefone)values(:n, :e, :t)");
+// //Vincula o nome Gabriel ao valor "n:"
+// //Vincula os valores aos parâmetros.
+// $cmd->bindValue(":n","Cirlene");
+// $cmd->bindValue(":e","cirlenem@gmaill.com");
+// $cmd->bindValue(":t","11984567392");
+// $cmd->execute();
+
+
+// pdo->query ("INSERT INTO usuario(nome, email, telefone)values('Gabriel', 'gabriel@gmail.com', '1198763245')");
+
+// $pdo->query ("INSERT INTO cliente(nome, email, telefone)VALUES('Gabriel', 'gabriel@gmail.com', '1198763645')");
+
+
+
+// //Delete
+// $cmd = $pdo->query("DELETE FROM usuario where id = '14' ");
+
+// $cmd->execute();
+
+// $cmd = $pdo->query("DELETE FROM usuario where id = :cod ");
+// $cod = 1;
+
+// //Substitue cod pela var $cod
+// $cmd->bindValue(":cod", $cod);
+// $cmd->execute();
+
+//Desafio
+$cod = 1;
+$cmd = $pdo->query("DELETE FROM usuario where id = '$cod' ");
 $cmd->execute();
+
 ?>
+
