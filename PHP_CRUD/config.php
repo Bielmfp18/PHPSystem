@@ -20,7 +20,7 @@ $password = "";
 try {
     // Cria uma nova instância do PDO para conectar ao banco de dados MySQL
 
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname,$username ,$password");
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname",$username ,$password);
 }catch(PDOException $e){
 
     // Interrompe a execução do script e exibe uma mensagem de erro com detalhes
