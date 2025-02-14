@@ -1,3 +1,17 @@
+
+<?php
+ 
+require 'conexao.php';//Para chamar a página com os dados do login.
+
+$sql = "SELECT * FROM usuarios";
+//Utiliza-se a variável $cmd para que na cosulta do foreach o código reconheça que o valor recebido na variável é um objeto do tipo bool (Verdadeiro ou falso).
+$cmd = $pdo->prepare($sql);
+$cmd->execute();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,13 +51,30 @@
                     <label for="data_nascimento">Data de Nascimento</label><br>
                     <input type="date" name="data_nascimento" id="data_nascimento"><br><br><br>
                     <input type="submit" value="Cadastrar">
+                 
+                    
                 </div>
             </form>
-
+            <?php 
+            //O fetchALL(PDO::FETCH_DEFAULT) serve para chamar mais de uma linha do Banco de Dados para o registro.
+            $usuarios = $cmd->fetchALL(PDO::FETCH_DEFAULT);
+            foreach ($usuarios as $usuario){ ?>
+            <tr>
+            <td><?= $usuario['id'] ?></td>
+            <td><?= $usuario['nome'] ?></td>
+                <td><?= $usuario['senha'] ?></td>
+                <td><?= $usuario['telefone'] ?></td>
+                <td><?= $usuario['data_nascimento'] ?></td>
+                <td>
+                 
+                </td>
+            </tr>
+            <?php } ?>
         
         <br><br><br>
         <div class="texto1">
             <p>© Copyright Green IT - 2025</p>
+      
             </div>
         </div>
     </div>
@@ -52,63 +83,3 @@
 </body>
 
 </html>
-
-<?php
-// Inclua o arquivo de conexão
-require("conexao.php");
-
-// Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
-    $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
-    $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
-    $data_nascimento = isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : '';
-}
-
-// Verifica se todos os campos foram preenchidos
-if (empty($nome) || empty($senha) || empty($telefone) || empty($data_nascimento)) {
-    echo "<script>alert('Preencha todos os campos, por favor!');</script>";
-} else {
-    // Converte a data para o formato correto
-    $data_nascimento = date('Y-m-d', strtotime($data_nascimento));
-
-    // Hash da senha para segurança
-    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
-
-    // Prepara a query para inserção no banco de dados
-    $sql = "INSERT INTO usuario (nome, senha, telefone, data_nascimento) VALUES (?, ?, ?, ?)";
-    if ($stmt = $conn->prepare($sql)) {
-        // Vincula os parâmetros da query
-        $stmt->bind_param("ssss", $nome, $senha_hash, $telefone, $data_nascimento);
-
-        // Executa a query e verifica se ocorreu com sucesso
-        if ($stmt->execute()) {
-            echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
-            echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
-        } else {
-            // Caso ocorra um erro na execução, exibe o erro
-            echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
-        }
-
-
-        // Executa a query e verifica se ocorreu com sucesso
-        if ($stmt->execute()) {
-            echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
-            echo "<meta http-equiv='refresh' content='0; url=cadastro.php'>";
-        } else {
-            // Caso ocorra um erro na execução, exibe o erro
-            echo "<script>alert('Erro ao fazer o cadastro: " . $stmt->error . "');</script>";
-        }
-
-        // Fecha a conexão
-        $stmt->close();
-    } else {
-        echo "<script>alert('Erro ao preparar a query: " . $conn->error . "');</script>";
-    }
-
-    // Fecha a conexão com o banco de dados
-    $conn->close();
-}
-
-?>

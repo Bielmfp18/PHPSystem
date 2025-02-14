@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,15 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':cpf', $cpf);
         $stmt->bindParam(':data_nascimento', $data_nascimento);
-if($stmt->execute()){
-echo "Usuário cadastro com sucesso";
-}else{
-    echo "Erro ao cadastrar usuário";
-}} catch(PDOException $e){
-echo "Erro ao inserir o usuário ".$e->getMessage();
-    } } else {
-        echo "Método de requisição inválido. ";
+        if ($stmt->execute()) {
+            echo "Usuário cadastro com sucesso";
+        } else {
+            echo "Erro ao cadastrar usuário";
+        }
+    } catch (PDOException $e) {
+        echo "Erro ao inserir o usuário " . $e->getMessage();
     }
-
-?>
-
+} else {
+    echo "Método de requisição inválido. ";
+}
