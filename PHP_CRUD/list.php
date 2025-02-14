@@ -2,6 +2,7 @@
  require 'config.php';//Para chamar a página com os dados do login.
 
  $sql = "SELECT * FROM usuarios";
+ //Utiliza-se a variável $cmd para que na cosulta do foreach o código reconheça que o valor recebido na variável é um objeto do tipo bool (Verdadeiro ou falso).
 $cmd = $pdo->prepare($sql);
 $cmd->execute();
 
@@ -33,6 +34,7 @@ $cmd->execute();
         <tbody>
         
             <?php 
+            //O fetchALL(PDO::FETCH_DEFAULT) serve para chamar mais de uma linha do Banco de Dados para o registro.
             $usuarios = $cmd->fetchALL(PDO::FETCH_DEFAULT);
             foreach ($usuarios as $usuario){ ?>
             <tr>
