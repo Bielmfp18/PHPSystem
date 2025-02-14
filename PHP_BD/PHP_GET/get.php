@@ -2,7 +2,7 @@
 
 $nome = isset($_GET['nome']) ? $_GET['nome'] : "";
 
-if($nome === "Wilton" || $nome === "Ronaldo" || $nome === "Juliana"){
+if($nome == "Wilton" || $nome == "Ronaldo" || $nome == "Juliana"){
 echo "Olá ".$nome;
 }
 ?>
