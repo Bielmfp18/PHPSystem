@@ -21,6 +21,7 @@ try {
     // Cria uma nova instância do PDO para conectar ao banco de dados MySQL
 
     $pdo = new PDO("mysql:host=$host;dbname=$dbname",$username ,$password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Pega os erros do PDO.
 }catch(PDOException $e){
 
     // Interrompe a execução do script e exibe uma mensagem de erro com detalhes

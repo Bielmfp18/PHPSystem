@@ -1,3 +1,15 @@
+<?php 
+ require 'config.php';//Para chamar a página com os dados do login.
+
+ $sql = "SELECT * FROM usuarios";
+$cmd = $pdo->prepare($sql);
+$cmd->execute();
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,7 +31,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($usuarios as $usuario): ?>
+        
+            <?php 
+            $usuarios = $cmd->fetchALL(PDO::FETCH_DEFAULT);
+            foreach ($usuarios as $usuario){ ?>
             <tr>
                 <td><?= $usuario['id'] ?></td>
                 <td><?= $usuario['nome'] ?></td>
@@ -31,7 +46,7 @@
                     <a href="delete.php?id=<?= $usuario['id'] ?>" onclick="return confirm('Tem certeza que deseja deletar este usuário?')">Deletar</a>
                 </td>
             </tr>
-            <?php endforeach; ?>
+            <?php } ?>
         </tbody>
     </table>
 </body>

@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $sql = "INSERT INTO usuarios ( nome, email, cpf, data_nascimento) VALUES (:nome, :email, :cpf, :data_nascimento )";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':id', $id);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':cpf', $cpf);
@@ -29,14 +28,3 @@ echo "Erro ao inserir o usuário ".$e->getMessage();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert</title>
-</head>
-<body>
-    
-</body>
-</html>
