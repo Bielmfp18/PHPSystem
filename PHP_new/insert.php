@@ -28,4 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Método de requisição inválido. ";
 }
 
+
 ?>
+<br><a href="index.php">Voltar à Lista de usuários</a>

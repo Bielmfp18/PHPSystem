@@ -56,7 +56,7 @@ $cmd->execute();
 				<?php } ?>
 			</tbody>
 		</table>
-
+	
 	</section>
 </body>
 
