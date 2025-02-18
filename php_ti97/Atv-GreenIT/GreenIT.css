@@ -43,20 +43,34 @@ div {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0px;
-    padding-left: 0%;
-    padding-right: 12%;
+    justify-content: center; /* Centraliza todo o conteúdo do nav */
+    padding: 10px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffff;
 }
 
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 5px 15px;
-    justify-content: space-between;
+nav .container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    max-width: 1200px; /* Opcional: limita a largura máxima do conteúdo */
+}
 
+nav .logo {
+    flex: 1; /* Faz a logo ocupar o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza a logo */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 5px 15px;
 }
 
 nav ul li a {
@@ -68,7 +82,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: green;
-    transform: .4s;
+    transition: color 0.4s;
 }
 
 .cadastro{
