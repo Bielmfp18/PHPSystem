@@ -1,15 +1,10 @@
-
 <?php
- 
-require 'conexao.php';//Para chamar a página com os dados do login.
 
-$sql = "SELECT * FROM usuarios";
-//Utiliza-se a variável $cmd para que na cosulta do foreach o código reconheça que o valor recebido na variável é um objeto do tipo bool (Verdadeiro ou falso).
-$cmd = $pdo->prepare($sql);
-$cmd->execute();
-
+require 'conexao.php';
 
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -20,6 +15,8 @@ $cmd->execute();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="GreenIT.css">
+    <link rel="stylesheet" href="styles.css">
+   
 </head>
 
 <body>
@@ -40,44 +37,31 @@ $cmd->execute();
         <div class="background1">
 
             <h1>Cadastro</h1>
-            <form action="cadastro.php" method="post">
+            <form action="insert.php" method="post">
                 <div class="cadastro">
                     <label for="nome">Nome</label><br>
-                    <input type="text" name="nome" id="nome"><br><br>
+                    <input type="text" name="nome" id="nome" required><br><br>
+                    <label for="email">Email</label><br>
+                    <input type="text" name = "email" id="email" required><br><br>
                     <label for="senha">Senha</label><br>
-                    <input type="text" name="senha" id="senha"><br><br>
+                    <input type="text" name="senha" id="senha" required><br><br>
                     <label for="telefone">Telefone</label><br>
-                    <input type="text" name="telefone" id="telefone"><br><br><br>
+                    <input type="text" name="telefone" id="telefone" required><br><br><br>
                     <label for="data_nascimento">Data de Nascimento</label><br>
-                    <input type="date" name="data_nascimento" id="data_nascimento"><br><br><br>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required><br><br><br>
                     <input type="submit" value="Cadastrar">
-                 
-                    
+
+
                 </div>
             </form>
-            <?php 
-            //O fetchALL(PDO::FETCH_DEFAULT) serve para chamar mais de uma linha do Banco de Dados para o registro.
-            $usuarios = $cmd->fetchALL(PDO::FETCH_DEFAULT);
-            foreach ($usuarios as $usuario){ ?>
-            <tr>
-            <td><?= $usuario['id'] ?></td>
-            <td><?= $usuario['nome'] ?></td>
-                <td><?= $usuario['senha'] ?></td>
-                <td><?= $usuario['telefone'] ?></td>
-                <td><?= $usuario['data_nascimento'] ?></td>
-                <td>
-                 
-                </td>
-            </tr>
-            <?php } ?>
-        
-        <br><br><br>
-        <div class="texto1">
-            <p>© Copyright Green IT - 2025</p>
       
+            <br><br><br>
+            <div class="texto1">
+                <p>© Copyright Green IT - 2025</p>
+
             </div>
         </div>
-    </div>
+        </div>
     </header>
 
 </body>

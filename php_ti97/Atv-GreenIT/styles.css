@@ -1,0 +1,42 @@
+.cadastro{
+    background-color: #02a802;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    border-radius: 10px;
+    color: white;
+    width: 350px;  /* Ajuste a largura  */
+    height: 800px;  /* Ajuste a altura */
+    font-size: 18px;  /* Ajuste o tamanho da fonte */
+    border-radius: 10px;  /*  Bordas arredondadas */
+    }
+
+    /* Mexendo com os botões do cadastro */
+input[type="submit"] {
+    width: 200px;  /* Ajuste a largura conforme necessário */
+    height: 50px;  /* Ajuste a altura conforme necessário */
+    font-size: 16px;  /* Ajuste o tamanho da fonte */
+    border-radius: 10px;  /* Opcional: se quiser bordas arredondadas */
+}
+
+/* Aumentando a altura dos campos de entrada */
+label, input {
+    display: flex;
+    line-height: 30px;
+    outline: none;
+    font-size: 16px;  /* Ajuste o tamanho da fonte */
+    width: 100%;
+    height: 100px;  /* Aumentei a altura dos campos de entrada */
+    border-radius: 10px;
+}
+
+label{
+    display: flex;
+    line-height: 30px;
+    outline: none;
+    font-size: 18px;  /* Ajuste o tamanho da fonte */
+    width: 100%;
+    height: 100px;  /* Aumentei a altura dos campos de entrada */
+    border-radius: 10px;
+}
