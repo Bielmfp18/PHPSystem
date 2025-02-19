@@ -24,6 +24,16 @@ print_r($_SESSION).'<br>';
  
  //é publico, não deve guardar dados sensíveis
  
-setcookie('nome', 'ti97', time()+(86400)); //Tempo em segundo = 1 dia 60.60.24
+ //Nome do cookie é "nome" com o valor "ti97"
  
+setcookie('nome', 'ti97', time()+(86400)); //Tempo em segundo = 1 dia 60.60.24
+
+// echo $_COOKIE['nome'];
+
+if(isset ($_COOKIE['nome'])){
+echo $_COOKIE['nome'];
+}
+else{
+    echo"Cookie não existe";
+}
 ?>
