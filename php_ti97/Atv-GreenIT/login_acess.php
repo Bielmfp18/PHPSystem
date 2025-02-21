@@ -8,7 +8,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     $senha = $_POST['senha'];
 
  //Gera a consulta SQL
- $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+ $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = md5('$senha')";
  $stmt = $conn->query($sql);
 $result = $stmt->fetchAll(PDO::FETCH_DEFAULT);
  //Verifica se encontrou algum registro no Banco.

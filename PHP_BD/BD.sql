@@ -14,8 +14,10 @@ USE atividade;
 
 CREATE TABLE IF NOT EXISTS usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL UNIQUE,
+    nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    telefone CHAR(11) NOT NULL UNIQUE
+    senha VARCHAR(80) NOT NULL,
+    telefone CHAR(11) NOT NULL,
+    data_nasc DATE NOT NULL 
 
 );
